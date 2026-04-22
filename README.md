@@ -1,4 +1,4 @@
-}
+
 # 📡 Cisco Packet Tracer Labs
 
 This repository contains my completed labs from Cisco Networking Academy using Cisco Packet Tracer.
