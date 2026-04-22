@@ -15,14 +15,18 @@ Learn how to navigate Cisco IOS and use basic commands.
 
 ## 📷 Screenshots
 
-### IOS Navigation
+### Topology
 
-![IOS](ios.png)
+![Topology](Topology.png)
+
+### IOS-Modes
+
+![ios-modes](ios-modes.png)
 
 ### Show Commands
 
-![Show](show.png)
+![show-commands](show-commands.png)
 
 ### Help Command
 
-![Help](help.png)
+![help](help-commands.png)
