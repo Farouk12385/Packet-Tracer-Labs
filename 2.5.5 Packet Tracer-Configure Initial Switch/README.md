@@ -17,14 +17,18 @@ Configure basic switch settings and secure access.
 
 ## 📷 Screenshots
 
+### Topology
+
+![Topology](Topology.png)
+
 ### Running Configuration
 
-![Config](config.png)
+![config-hostname-enablesecret](config-hostname-enablesecret.png)
 
 ### IP Configuration
 
-![IP](ip.png)
+![IP](IP.png)
 
-### Banner
+### Banner-Config
 
-![Banner](banner.png)
+![banner-config](banner-config.png)
