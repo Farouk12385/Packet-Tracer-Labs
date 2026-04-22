@@ -32,4 +32,4 @@ Configure basic router settings and secure access.
 ### IP
 ![IP](IP.png)
 
-![Banner](banner.png)
+
