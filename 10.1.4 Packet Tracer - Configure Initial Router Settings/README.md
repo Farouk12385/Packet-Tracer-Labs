@@ -1,30 +1,35 @@
-# Lab 2.5.5 - Configure Initial Switch Settings
+# Lab 10.1.4 - Configure Initial Router Settings
 
 ## 📌 Objective
 
-Configure basic switch settings and secure access.
+Configure basic router settings and secure access.
 
 ## 🛠️ Tasks Completed
 
-* Set hostname (S1)
+* Set hostname (R1)
 * Disabled DNS lookup
 * Configured enable secret
 * Secured console and VTY access
 * Enabled password encryption
-* Configured VLAN 1 IP address
-* Set default gateway
+* Configured interface IP address
+* Activated interface (no shutdown)
 * Added MOTD banner
 
 ## 📷 Screenshots
 
-### Running Configuration
+### Banner-LineConsole Configuration
 
-![Config](config.png)
+![Banner-LineConsole](Banner-LineConsole.png)
 
-### IP Configuration
+### Topology Status
 
-![IP](ip.png)
+![Topology](Topology.png)
 
-### Banner
+### Running-Config
+
+![Running-Config](Running-Config.png)
+
+### IP
+![IP](IP.png)
 
 ![Banner](banner.png)
