@@ -56,7 +56,7 @@ R1(config-line)# login
 
 The banner and console line configuration as seen in the running config:
 
-![Banner and Console Config](ScreenShot/Banner-LineConsole.png)
+![Banner and Console Config](ScreenShots/Banner-LineConsole.png)
 
 ---
 
