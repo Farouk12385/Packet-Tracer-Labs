@@ -16,7 +16,7 @@ This lab walks through the initial configuration of a Cisco switch (S1) from scr
 
 ## 🖧 Network Topology
 
-![Topology](ScreensShots/Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 Two switches (**S1** and **S2**) are interconnected. Each switch has a PC connected to it (**PC1** and **PC2**).
 
