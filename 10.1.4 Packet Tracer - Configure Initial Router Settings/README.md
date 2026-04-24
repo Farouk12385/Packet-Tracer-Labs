@@ -16,7 +16,7 @@ This lab walks through the initial configuration of a Cisco router (R1) from scr
 
 ## 🖧 Network Topology
 
-![Topology](ScreenShot/Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 A single router (**R1**) is connected directly to a PC (**PCA**) via a console or Ethernet cable.
 
@@ -39,7 +39,7 @@ R1(config)# service password-encryption
 
 The running config shows the enable secret stored as a **Type 5** (MD5) hash and the enable password as a **Type 7** hash:
 
-![Running Config](ScreenShot/Running-Config.png)
+![Running Config](ScreenShots/Running-Config.png)
 
 ---
 
@@ -56,7 +56,7 @@ R1(config-line)# login
 
 The banner and console line configuration as seen in the running config:
 
-![Banner and Console Config](ScreenShot/Banner-LineConsole.png)
+![Banner and Console Config](ScreenShots/Banner-LineConsole.png)
 
 ---
 
@@ -68,7 +68,7 @@ Use `show ip interface brief` to verify the status of all interfaces on the rout
 R1# show ip interface brief
 ```
 
-![IP Interface Brief](ScreenShot/IP.png)
+![IP Interface Brief](ScreenShots/IP.png)
 
 All interfaces show **administratively down/down** until they are configured with an IP address and brought up with the `no shutdown` command.
 
