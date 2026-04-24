@@ -100,7 +100,7 @@ S1# copy running-config startup-config
 
 Confirm the destination filename when prompted:
 
-![Save Config](screenshots/Save-Config.png)
+![Save Config](ScreenShots/Save-Config.png)
 
 ---
 
