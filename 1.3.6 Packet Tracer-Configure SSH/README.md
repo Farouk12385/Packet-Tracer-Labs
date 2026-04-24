@@ -16,7 +16,7 @@ This lab demonstrates how to configure SSH on a Cisco switch (S1) to replace ins
 
 ## 🖧 Network Topology
 
-![Topology](screenshots/Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 A single PC (**PC1**) is connected directly to switch **S1**.
 
@@ -34,7 +34,7 @@ S1(config)# enable password cisco
 
 At this point the password is stored in **plaintext** in the running config:
 
-![Enable Password](screenshots/enable-password.png)
+![Enable Password](ScreenShots/enable-password.png)
 
 ---
 
@@ -58,9 +58,9 @@ S1(config)# crypto key generate rsa
 
 When prompted, enter **1024** for the modulus size. The key name will be `S1.netacad.pka`.
 
-![Generate RSA Keys](screenshots/encrypt-administartor-byrsa.png)
+![Generate RSA Keys](ScreenShots/encrypt-administartor-byrsa.png)
 
-![RSA Key Confirmation](screenshots/encrypt-way.png)
+![RSA Key Confirmation](ScreenShots/encrypt-way.png)
 
 ---
 
@@ -74,7 +74,7 @@ S1(config)# service password-encryption
 
 The enable password is now stored as a **Type 7** encrypted hash instead of plaintext:
 
-![Encrypted Enable Password](screenshots/encrypted-enable-password.png)
+![Encrypted Enable Password](ScreenShots/encrypted-enable-password.png)
 
 ---
 
@@ -82,11 +82,11 @@ The enable password is now stored as a **Type 7** encrypted hash instead of plai
 
 **Before** encryption — passwords appear in plaintext:
 
-![VTY Plaintext Password](screenshots/line-cons0-pass.png)
+![VTY Plaintext Password](ScreenShots/line-cons0-pass.png)
 
 **After** `service password-encryption` — all VTY passwords are hashed:
 
-![VTY Encrypted Password](screenshots/line-cons0-encryptedpass.png)
+![VTY Encrypted Password](ScreenShots/line-cons0-encryptedpass.png)
 
 ---
 
@@ -123,7 +123,7 @@ Confirm the destination filename when prompted:
 .
 ├── 1_3_6_Packet_Tracer_-_Configure_SSH.pka
 ├── README.md
-└── screenshots/
+└── ScreenShots/
     ├── Topology.png
     ├── enable-password.png
     ├── encrypt-administartor-byrsa.png
