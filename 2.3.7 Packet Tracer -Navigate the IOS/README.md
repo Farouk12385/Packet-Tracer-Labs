@@ -16,7 +16,7 @@ This lab introduces the Cisco IOS command-line interface (CLI). You will practic
 
 ## 🖧 Network Topology
 
-![Topology](ScreenShot/Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 A single PC (**PC1**) is connected to switch **S1** via a console cable.
 
@@ -34,7 +34,7 @@ S1# configure terminal
 S1(config)# hostname S1
 ```
 
-![IOS Modes](ScreenShot/ios-modes.png)
+![IOS Modes](ScreenShots/ios-modes.png)
 
 ---
 
@@ -46,7 +46,7 @@ Type `?` at any prompt to list available commands. Use `show ?` in Privileged EX
 S1# show ?
 ```
 
-![Help Commands](ScreenShot/help-commands.png)
+![Help Commands](ScreenShots/help-commands.png)
 
 ---
 
@@ -58,7 +58,7 @@ Use `show running-config` to display the current active configuration:
 S1# show running-config
 ```
 
-![Show Commands](ScreenShot/show-commands.png)
+![Show Commands](ScreenShots/show-commands.png)
 
 ---
 
