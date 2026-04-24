@@ -16,7 +16,7 @@ This lab walks through connecting a Cisco router (R1) to multiple LANs by config
 
 ## 🖧 Network Topology
 
-![Topology](ScreenShot/Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 Two routers (**R1** and **R2**) are interconnected via a Serial WAN link (`209.165.200.224/30`). R1 serves two LANs through switches S1 and S2, while R2 serves two additional LANs through S3 and S4.
 
@@ -65,7 +65,7 @@ R1(config-if)# no shutdown
 
 The running config confirms all interface addresses, descriptions, and OSPF routing:
 
-![Running Config](ScreenShot/Running-Config.png)
+![Running Config](ScreenShots/Running-Config.png)
 
 ---
 
@@ -79,7 +79,7 @@ From PC1, ping R1's GigabitEthernet0/0 interface to confirm local LAN connectivi
 C:\>ping 192.168.10.1
 ```
 
-![Ping Gateway](ScreenShot/IP-running.png)
+![Ping Gateway](ScreenShots/IP-running.png)
 
 All 4 packets received with **0% loss** — LAN 1 is fully operational.
 
@@ -93,7 +93,7 @@ From PC1, ping R2 to verify routing across the Serial WAN link:
 C:\>ping 198.168.1.1
 ```
 
-![Ping WAN](ScreenShot/ip-running2.png)
+![Ping WAN](ScreenShots/ip-running2.png)
 
 All 4 packets received — inter-router connectivity is confirmed.
 
@@ -107,7 +107,7 @@ From PC1, ping hosts in R2's LANs to confirm full end-to-end routing:
 C:\>ping 198.168.1.2
 ```
 
-![Ping Remote LAN](ScreenShot/ip-running3.png)
+![Ping Remote LAN](ScreenShots/ip-running3.png)
 
 Successful replies confirm that OSPF routing is propagating routes correctly across all networks.
 
