@@ -41,7 +41,7 @@ Router# configure terminal
 Router(config)# hostname RTA
 ```
 
-![Set Hostname RTA](ScreenShots/1777048319031_Config-HostName-RTA.png)
+![Set Hostname RTA](ScreenShots/Config-HostName-RTA.png)
 
 ---
 
@@ -56,9 +56,9 @@ RTA(config-if)# ip address 10.10.10.1 255.255.255.0
 RTA(config-if)# no shutdown
 ```
 
-![RTA Interface for SW1](ScreenShots/1777048319032_Config-IP-Addressing-RTA_forSW1_.png)
+![RTA Interface for SW1](ScreenShots/Config-IP-Addressing-RTA_forSW1_.png)
 
-![RTA Interface Description](ScreenShots/1777048297591_Config-Description-RTA.png)
+![RTA Interface Description](ScreenShots/Config-Description-RTA.png)
 
 ---
 
@@ -73,7 +73,7 @@ RTA(config-if)# ip address 10.10.20.1 255.255.255.0
 RTA(config-if)# no shutdown
 ```
 
-![RTA Interface for SW2](ScreenShots/1777048319031_Config-IP-Address--Description-RTA_forSW2_.png)
+![RTA Interface for SW2](ScreenShots/Config-IP-Address--Description-RTA_forSW2_.png)
 
 ---
 
@@ -85,7 +85,7 @@ Secure privileged EXEC mode with an encrypted enable secret:
 RTA(config)# enable secret Ciscoenpa55
 ```
 
-![RTA Enable Secret](ScreenShots/1777048297592_Config-EnableSecret-RTA.png)
+![RTA Enable Secret](ScreenShots/Config-EnableSecret-RTA.png)
 
 ---
 
@@ -104,7 +104,7 @@ RTA(config-line)# password Ciscolinepa55
 RTA(config-line)# login
 ```
 
-![RTA Lines Configuration](ScreenShots/1777048297594_Config-Lines-RTA.png)
+![RTA Lines Configuration](ScreenShots/Config-Lines-RTA.png)
 
 ---
 
@@ -116,7 +116,7 @@ Set a message-of-the-day banner to warn unauthorized users:
 RTA(config-line)# banner motd &Unauthorized access is strictly prohibited&
 ```
 
-![RTA Banner MOTD](ScreenShots/1777048297595_Massager-Banner-RTA.png)
+![RTA Banner MOTD](ScreenShots/Massager-Banner-RTA.png)
 
 ---
 
@@ -128,7 +128,7 @@ Persist the running configuration to startup so it survives a reboot:
 RTA# copy running-config startup-config
 ```
 
-![Save RTA Config](ScreenShots/1777048297596_To-Save-Config-RTA.png)
+![Save RTA Config](ScreenShots/To-Save-Config-RTA.png)
 
 ---
 
@@ -136,7 +136,7 @@ RTA# copy running-config startup-config
 
 Confirm the full configuration was accepted without errors:
 
-![RTA Config Accepted](ScreenShots/1777048297596_to-check-all-accept-RTA.png)
+![RTA Config Accepted](ScreenShots/to-check-all-accept-RTA.png)
 
 ---
 
@@ -154,7 +154,7 @@ Switch(config-if)# exit
 Switch(config)# ip default-gateway 10.10.10.1
 ```
 
-![SW1 Gateway Config](ScreenShots/1777048319030_Config-Gateway-S1.png)
+![SW1 Gateway Config](ScreenShots/Config-Gateway-S1.png)
 
 ---
 
@@ -172,7 +172,7 @@ Switch(config-line)# password Ciscolinepa55
 Switch(config-line)# login
 ```
 
-![SW1 Enable Secret & Lines](ScreenShots/1777048297593_CoNFig-EnableSecret-SW1.png)
+![SW1 Enable Secret & Lines](ScreenShots/CoNFig-EnableSecret-SW1.png)
 
 ---
 
@@ -190,7 +190,7 @@ Switch(config-if)# exit
 Switch(config)# ip default-gateway 10.10.20.1
 ```
 
-![SW2 Gateway Config](ScreenShots/1777048319031_Config-Gateway-S2.png)
+![SW2 Gateway Config](ScreenShots/Config-Gateway-S2.png)
 
 ---
 
@@ -208,7 +208,7 @@ Switch(config-line)# password Ciscolinepa55
 Switch(config-line)# login
 ```
 
-![SW2 Enable Secret & Lines](ScreenShots/1777048297594_Config-EnableSecret-SW2.png)
+![SW2 Enable Secret & Lines](ScreenShots/Config-EnableSecret-SW2.png)
 
 ---
 
@@ -222,7 +222,7 @@ Set PC-1 to static IP addressing:
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 10.10.10.1 |
 
-![PC-1 IP Configuration](ScreenShots/1777048297595_IP-Confing-PC1.png)
+![PC-1 IP Configuration](ScreenShots/IP-Confing-PC1.png)
 
 ---
 
@@ -236,7 +236,7 @@ Set PC-2 to static IP addressing:
 | Subnet Mask | 255.255.255.0 |
 | Default Gateway | 10.10.20.1 |
 
-![PC-2 IP Configuration](ScreenShots/1777048297595_IP-Config-PC2.png)
+![PC-2 IP Configuration](ScreenShots/IP-Config-PC2.png)
 
 ---
 
@@ -254,7 +254,7 @@ Ping PC-1 to verify inter-VLAN routing through RTA:
 C:\> ping 10.10.20.10
 ```
 
-![Ping PC-2 to PC-1](ScreenShots/1777048319032_PIng_-PC2_-To-IP-OF-PC1.png)
+![Ping PC-2 to PC-1](ScreenShots/PIng_-PC2_-To-IP-OF-PC1.png)
 
 > ✅ **Result:** 4/4 packets received — 0% loss
 
@@ -268,7 +268,7 @@ Verify PC-2 can reach its own default gateway:
 C:\> ping 10.10.20.1
 ```
 
-![Ping PC-2 to its own Gateway](ScreenShots/1777048319032_PIng-PC2-To-Defualt-Getaway-Of-PC2.png)
+![Ping PC-2 to its own Gateway](ScreenShots/PIng-PC2-To-Defualt-Getaway-Of-PC2.png)
 
 > ✅ **Result:** 4/4 packets received — 0% loss
 
@@ -282,7 +282,7 @@ Verify PC-2 can reach the far-side interface of RTA:
 C:\> ping 10.10.10.1
 ```
 
-![Ping PC-2 to PC-1 Gateway](ScreenShots/1777048319032_PIng-PC2-To-Defualt-Getaway-Of-PC1.png)
+![Ping PC-2 to PC-1 Gateway](ScreenShots/PIng-PC2-To-Defualt-Getaway-Of-PC1.png)
 
 > ✅ **Result:** 4/4 packets received — 0% loss
 
@@ -296,7 +296,7 @@ Verify reachability to SW1's management interface across the routed boundary:
 C:\> ping 10.10.10.2
 ```
 
-![Ping PC-2 to SW1](ScreenShots/1777048319032_Ping-PC2-To-SW1.png)
+![Ping PC-2 to SW1](ScreenShots/Ping-PC2-To-SW1.png)
 
 > ⚠️ **Result:** 2/4 packets received — 50% loss  
 > *Normal — first packets timeout during ARP resolution. Subsequent pings succeed.*
@@ -311,7 +311,7 @@ Verify reachability to SW2's local management interface:
 C:\> ping 10.10.20.2
 ```
 
-![Ping PC-2 to SW2](ScreenShots/1777048319033_Ping-PC2-To-SW2.png)
+![Ping PC-2 to SW2](ScreenShots/Ping-PC2-To-SW2.png)
 
 > ⚠️ **Result:** 3/4 packets received — 25% loss  
 > *Normal — first packet times out during ARP resolution. Subsequent pings succeed.*
