@@ -16,7 +16,7 @@ This lab walks through the initial configuration of a Cisco switch (S1) from scr
 
 ## 🖧 Network Topology
 
-![Topology](ScreenShots/Topology.png)
+![Topology](ScreensShots/Topology.png)
 
 Two switches (**S1** and **S2**) are interconnected. Each switch has a PC connected to it (**PC1** and **PC2**).
 
@@ -39,7 +39,7 @@ S1(config)# service password-encryption
 
 The running config shows the enable secret stored as a **Type 5** (MD5) hash and the enable password as a **Type 7** hash:
 
-![Hostname and Enable Secret](ScreenShots/config-hostname-enablesecret.png)
+![Hostname and Enable Secret](ScreensShots/config-hostname-enablesecret.png)
 
 ---
 
@@ -56,7 +56,7 @@ S1(config-line)# login
 
 The banner and console line configuration as seen in the running config:
 
-![Banner and Console Config](ScreenShots/banner-config.png)
+![Banner and Console Config](ScreensShots/banner-config.png)
 
 ---
 
@@ -68,7 +68,7 @@ Use `show ip interface brief` to verify the status of all interfaces on the swit
 S1# show ip interface brief
 ```
 
-![IP Interface Brief](ScreenShots/IP.png)
+![IP Interface Brief](ScreensShots/IP.png)
 
 Active ports connected to other devices show **up/up** while unused ports show **down/down**.
 
