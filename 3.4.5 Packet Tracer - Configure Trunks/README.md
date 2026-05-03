@@ -16,7 +16,7 @@ This lab demonstrates how to configure 802.1Q trunk links between three Cisco sw
 
 ## 🖧 Network Topology
 
-![Topology](Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 | Device | IP Address | VLAN |
 |---|---|---|
@@ -42,21 +42,21 @@ Before configuring trunks, verify the existing VLAN assignments on each switch.
 S1# show vlan brief
 ```
 
-![Display Current VLANs on S1](Display-the-current-VLANs-on-S1.png)
+![Display Current VLANs on S1](ScreenShots/Display-the-current-VLANs-on-S1.png)
 
 **S2:**
 ```
 S2# show vlan brief
 ```
 
-![Display Current VLANs on S2](Display-the-current-VLANs-on-S2.png)
+![Display Current VLANs on S2](ScreenShots/Display-the-current-VLANs-on-S2.png)
 
 **S3:**
 ```
 S3# show vlan brief
 ```
 
-![Display Current VLANs on S3](Display-the-current-VLANs-on-S3.png)
+![Display Current VLANs on S3](ScreenShots/Display-the-current-VLANs-on-S3.png)
 
 > All three switches already have VLANs 10, 20, 30, 88, and 99 defined. S2 and S3 have access ports assigned (Fa0/11 → VLAN 10, Fa0/18 → VLAN 20, Fa0/6 → VLAN 30). S1 has no access port assignments since it only carries trunk links.
 
@@ -71,7 +71,7 @@ C:\>ping 172.17.10.24   (PC1 → PC4, both VLAN 10)
 C:\>ping 172.17.30.10   (PC3 → PC6, both VLAN 30)
 ```
 
-![Verify Loss of Connectivity](Verify-loss-of-connectivity-between-PCs-on-the-same-network.png)
+![Verify Loss of Connectivity](ScreenShots/Verify-loss-of-connectivity-between-PCs-on-the-same-network.png)
 
 All pings result in **100% packet loss** — confirming that without trunks, inter-switch VLAN traffic is blocked.
 
@@ -91,7 +91,7 @@ S1(config-if)# switchport trunk native vlan 99
 
 The interfaces cycle down then back up as they renegotiate in trunk mode.
 
-![Configure Trunking on S1](Configure-trunking-on-S1.png)
+![Configure Trunking on S1](ScreenShots/Configure-trunking-on-S1.png)
 
 ---
 
@@ -104,7 +104,7 @@ S1(config)# interface g0/2
 S1(config-if)# switchport trunk native vlan 99
 ```
 
-![Use VLAN 99 as the Native VLAN](use-VLAN-99-as-the-native-VLAN.png)
+![Use VLAN 99 as the Native VLAN](ScreenShots/use-VLAN-99-as-the-native-VLAN.png)
 
 ---
 
@@ -119,7 +119,7 @@ S2(config-if)# switchport trunk native vlan 99
 
 STP unblocks the port on VLAN 99 and restores port consistency automatically.
 
-![Correct Native VLAN Mismatch on S2](Correct-the-native-VLAN-mismatch-on-S2.png)
+![Correct Native VLAN Mismatch on S2](ScreenShots/Correct-the-native-VLAN-mismatch-on-S2.png)
 
 ---
 
@@ -134,7 +134,7 @@ S3(config-if)# switchport trunk native vlan 99
 
 > **Note:** A CDP native VLAN mismatch warning and STP PVID error appear briefly while S3 still has native VLAN 1. These clear once both ends match.
 
-![Correct Native VLAN Mismatch on S3](Correct-the-native-VLAN-mismatch-on-S3.png)
+![Correct Native VLAN Mismatch on S3](ScreenShots/Correct-the-native-VLAN-mismatch-on-S3.png)
 
 ---
 
@@ -146,7 +146,7 @@ S3(config-if)# switchport trunk native vlan 99
 S2# show interfaces trunk
 ```
 
-![Verify Trunking on S2](Verify-trunking-is-enabled-on-S2.png)
+![Verify Trunking on S2](ScreenShots/Verify-trunking-is-enabled-on-S2.png)
 
 Confirm that Gig0/1 shows:
 - **Mode:** auto → trunking
@@ -162,7 +162,7 @@ Confirm that Gig0/1 shows:
 S3# show interfaces trunk
 ```
 
-![Verify Trunking on S3](Verify-trunking-is-enabled-on-S3.png)
+![Verify Trunking on S3](ScreenShots/Verify-trunking-is-enabled-on-S3.png)
 
 Confirm that Gig0/2 shows:
 - **Mode:** auto → trunking
@@ -178,7 +178,7 @@ Confirm that Gig0/2 shows:
 S2# show interfaces trunk
 ```
 
-![Verify Configurations on S2](Verify-configurations-on-S2.png)
+![Verify Configurations on S2](ScreenShots/Verify-configurations-on-S2.png)
 
 Native VLAN is now **99** on Gig0/1, confirming the mismatch has been corrected.
 
@@ -190,7 +190,7 @@ Native VLAN is now **99** on Gig0/1, confirming the mismatch has been corrected.
 S3# show interfaces trunk
 ```
 
-![Verify Configurations on S3](Verify-configurations-on-S3.png)
+![Verify Configurations on S3](ScreenShots/Verify-configurations-on-S3.png)
 
 Native VLAN is now **99** on Gig0/2, confirming the mismatch has been corrected.
 
