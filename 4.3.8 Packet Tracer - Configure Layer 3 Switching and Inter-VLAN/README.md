@@ -16,7 +16,7 @@ This lab demonstrates Layer 3 switching as an alternative to Router-on-a-Stick. 
 
 ## 🖧 Network Topology
 
-![Topology](Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 | VLAN | Name | IPv4 Gateway (SVI) | IPv6 Gateway (SVI) |
 |---|---|---|---|
@@ -44,7 +44,7 @@ MLS(config-vlan)# vlan 30
 MLS(config-vlan)# name Faculty
 ```
 
-![Add VLANs on MLS](Add-VLANs-on-MLS.png)
+![Add VLANs on MLS](ScreenShots/Add-VLANs-on-MLS.png)
 
 ---
 
@@ -61,7 +61,7 @@ MLS(config-if)# switchport trunk native vlan 99
 
 The interface cycles down then back up as it transitions to trunk mode.
 
-![Configure Trunking on MLS](Configure-Trunking-on-MLS.png)
+![Configure Trunking on MLS](ScreenShots/Configure-Trunking-on-MLS.png)
 
 ---
 
@@ -75,7 +75,7 @@ S1(config-if)# switchport mode trunk
 S1(config-if)# switchport trunk native vlan 99
 ```
 
-![Configure Trunking on S1](Configure-trunking-on-S1.png)
+![Configure Trunking on S1](ScreenShots/Configure-trunking-on-S1.png)
 
 ---
 
@@ -97,7 +97,7 @@ MLS(config)# interface vlan 10
 MLS(config-if)# ip address 192.168.10.254 255.255.255.0
 ```
 
-![Configure SVI on MLS](Configure-SVI-on-MLS.png)
+![Configure SVI on MLS](ScreenShots/Configure-SVI-on-MLS.png)
 
 ---
 
@@ -117,7 +117,7 @@ Verify connectivity to the cloud with a ping to 209.165.200.226 (80% success on 
 MLS# ping 209.165.200.226
 ```
 
-![Configure Layer 3 Switching on MLS](Configure-Layer-3-Switching-on-MLS.png)
+![Configure Layer 3 Switching on MLS](ScreenShots/Configure-Layer-3-Switching-on-MLS.png)
 
 ---
 
@@ -131,7 +131,7 @@ MLS(config)# ip routing
 
 Verify the routing table with `show ip route` — connected routes for all VLAN subnets and the uplink subnet should appear:
 
-![Enable Routing](Enable-routing.png)
+![Enable Routing](ScreenShots/Enable-routing.png)
 
 ---
 
@@ -150,7 +150,7 @@ MLS(config)# interface vlan 30
 MLS(config-if)# ipv6 address 2001:db8:acad:30::1/64
 ```
 
-![Configure SVI for IPv6 on MLS](Configure-SVI-for-IPv6-on-MLS.png)
+![Configure SVI for IPv6 on MLS](ScreenShots/Configure-SVI-for-IPv6-on-MLS.png)
 
 ---
 
@@ -165,7 +165,7 @@ MLS(config-if)# ipv6 address 2001:db8:acad:a::1/64
 
 Verify the IPv6 routing table with `show ipv6 route` — connected routes for all VLAN and uplink prefixes should appear:
 
-![Configure G0/2 with IPv6 on MLS](Configure-G0-2-with-IPv6-on-MLS.png)
+![Configure G0/2 with IPv6 on MLS](ScreenShots/Configure-G0-2-with-IPv6-on-MLS.png)
 
 ---
 
@@ -177,7 +177,7 @@ Enable IPv6 unicast routing so the MLS can forward IPv6 traffic between SVIs and
 MLS(config)# ipv6 unicast-routing
 ```
 
-![Enable IPv6 Routing](Enable-IPv6-routing.png)
+![Enable IPv6 Routing](ScreenShots/Enable-IPv6-routing.png)
 
 ---
 
@@ -192,7 +192,7 @@ C:\>ping 192.168.10.2
 C:\>ping 192.168.10.254
 ```
 
-![Verify End-to-End Connectivity](Verify-end-to-end_connectivity.png)
+![Verify End-to-End Connectivity](ScreenShots/Verify-end-to-end_connectivity.png)
 
 Both pings succeed with **0% packet loss**, confirming that the SVIs are up, Layer 3 routing is active, and hosts can reach their default gateway and each other within the same VLAN.
 
