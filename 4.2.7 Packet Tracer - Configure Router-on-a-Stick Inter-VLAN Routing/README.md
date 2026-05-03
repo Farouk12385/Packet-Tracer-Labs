@@ -16,7 +16,7 @@ This lab demonstrates the Router-on-a-Stick method for inter-VLAN routing. A sin
 
 ## 🖧 Network Topology
 
-![Topology](Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 | Device | Network | VLAN | Gateway |
 |---|---|---|---|
@@ -41,7 +41,7 @@ S1(config)# vlan 10
 S1(config)# vlan 30
 ```
 
-![Create VLANs on S1](Create-VLANs-on-S1.png)
+![Create VLANs on S1](ScreenShots/Create-VLANs-on-S1.png)
 
 ---
 
@@ -64,7 +64,7 @@ S1(config-if)# exit
 S1# show vlan brief
 ```
 
-![Assign and Verify VLANs to Ports](Assign-and-Verify-VLANs-to-ports.png)
+![Assign and Verify VLANs to Ports](ScreenShots/Assign-and-Verify-VLANs-to-ports.png)
 
 Confirm that Fa0/11 is assigned to VLAN 10 and Fa0/6 is assigned to VLAN 30.
 
@@ -81,7 +81,7 @@ S1(config-if)# switchport mode trunk
 
 The interface cycles down then back up as it transitions to trunk mode.
 
-![Enable Trunking](Enable-trunking.png)
+![Enable Trunking](ScreenShots/Enable-trunking.png)
 
 ---
 
@@ -99,7 +99,7 @@ R1(config-subif)# encapsulation dot1Q 30
 R1(config-subif)# ip address 172.17.30.1 255.255.255.0
 ```
 
-![Configure Subinterfaces on R1](Configure-subinterfaces-on-R1-using-the-802_1Q-encapsulation.png)
+![Configure Subinterfaces on R1](ScreenShots/Configure-subinterfaces-on-R1-using-the-802_1Q-encapsulation.png)
 
 ---
 
@@ -112,7 +112,7 @@ R1(config)# interface g0/0
 R1(config-if)# no shutdown
 ```
 
-![Verify Configuration](Verify-Configuration.png)
+![Verify Configuration](ScreenShots/Verify-Configuration.png)
 
 After enabling G0/0, both subinterfaces become active. Verify with `show ip interface brief` — G0/0.10 should show 172.17.10.1 and G0/0.30 should show 172.17.30.1.
 
@@ -124,7 +124,7 @@ After enabling G0/0, both subinterfaces become active. Verify with `show ip inte
 
 Before trunking and subinterfaces are fully configured, a ping from PC1 to PC3 (172.17.30.10) across VLANs fails completely:
 
-![Test Connectivity Before Enabling](Test-connectivity-between-PC1-and-PC3.png)
+![Test Connectivity Before Enabling](ScreenShots/Test-connectivity-between-PC1-and-PC3.png)
 
 All 4 packets time out — VLANs are isolated with no inter-VLAN routing path.
 
@@ -134,7 +134,7 @@ All 4 packets time out — VLANs are isolated with no inter-VLAN routing path.
 
 After enabling the G0/0 physical interface on R1, re-run the same ping:
 
-![Test Connectivity After Enabling](Test-Connectivity-after-Enabling.png)
+![Test Connectivity After Enabling](ScreenShots/Test-Connectivity-after-Enabling.png)
 
 3 out of 4 packets succeed (the first times out while ARP resolves). Inter-VLAN routing is now fully operational through the router-on-a-stick subinterfaces.
 
