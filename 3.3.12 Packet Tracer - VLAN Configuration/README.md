@@ -16,7 +16,7 @@ This lab demonstrates how to create and name VLANs on three Cisco switches (S1, 
 
 ## 🖧 Network Topology
 
-![Topology](Topology.png)
+![Topology](ScreenShots/Topology.png)
 
 | Device | IP Address | VLAN |
 |---|---|---|
@@ -49,7 +49,7 @@ S1(config-vlan)# vlan 150
 S1(config-vlan)# name VOICE
 ```
 
-![Create and Name VLANs on S1](Createandname-vlans-On-S1.png)
+![Create and Name VLANs on S1](ScreenShots/Createandname-vlans-On-S1.png)
 
 ---
 
@@ -70,7 +70,7 @@ S2(config-vlan)# vlan 150
 S2(config-vlan)# name VOICE
 ```
 
-![Create and Name VLANs on S2](Createandname-vlans-On-S2.png)
+![Create and Name VLANs on S2](ScreenShots/Createandname-vlans-On-S2.png)
 
 ---
 
@@ -91,7 +91,7 @@ S3(config-vlan)# vlan 150
 S3(config-vlan)# name VOICE
 ```
 
-![Create and Name VLANs on S3](Createandname-vlans-On-S3.png)
+![Create and Name VLANs on S3](ScreenShots/Createandname-vlans-On-S3.png)
 
 ---
 
@@ -113,7 +113,7 @@ S2(config-if)# switchport mode access
 S2(config-if)# switchport access vlan 30
 ```
 
-![Assign VLANs to Active Ports on S2](Assign-VLANs-to-the-active-ports-on-S2.png)
+![Assign VLANs to Active Ports on S2](ScreenShots/Assign-VLANs-to-the-active-ports-on-S2.png)
 
 ---
 
@@ -135,7 +135,7 @@ S3(config-if)# switchport mode access
 S3(config-if)# switchport access vlan 30
 ```
 
-![Assign VLANs to Active Ports on S3](Assign-VLANs-to-the-active-ports-on-S3.png)
+![Assign VLANs to Active Ports on S3](ScreenShots/Assign-VLANs-to-the-active-ports-on-S3.png)
 
 ---
 
@@ -149,7 +149,7 @@ S3(config-if)# mls qos trust cos
 S3(config-if)# switchport voice vlan 150
 ```
 
-![Assign Voice VLAN to f0/11 on S3](Assign-the-VOICE-VLAN-to-f0-11-on-S3.png)
+![Assign Voice VLAN to f0/11 on S3](ScreenShots/Assign-the-VOICE-VLAN-to-f0-11-on-S3.png)
 
 ---
 
@@ -161,7 +161,7 @@ S3(config-if)# switchport voice vlan 150
 S1# show vlan brief
 ```
 
-![Verify VLANs on S1](to-verfiy-vlans-they-created-corectly-on-S1.png)
+![Verify VLANs on S1](ScreenShots/to-verfiy-vlans-they-created-corectly-on-S1.png)
 
 ---
 
@@ -171,7 +171,7 @@ S1# show vlan brief
 S2# show vlan brief
 ```
 
-![Verify VLANs on S2](to-verfiy-vlans-they-created-corectly-on-S2.png)
+![Verify VLANs on S2](ScreenShots/to-verfiy-vlans-they-created-corectly-on-S2.png)
 
 ---
 
@@ -181,7 +181,7 @@ S2# show vlan brief
 S3# show vlan brief
 ```
 
-![Verify VLANs on S3](to-verfiy-vlans-they-created-corectly-on-S3.png)
+![Verify VLANs on S3](ScreenShots/to-verfiy-vlans-they-created-corectly-on-S3.png)
 
 ---
 
@@ -189,7 +189,7 @@ S3# show vlan brief
 
 Confirm that all VLANs are active on S1 and no ports are yet assigned (S1 carries only trunk links):
 
-![S1 Show All VLANs](S1-to-show-all-vlans-configured.png)
+![S1 Show All VLANs](ScreenShots/S1-to-show-all-vlans-configured.png)
 
 ---
 
@@ -197,7 +197,7 @@ Confirm that all VLANs are active on S1 and no ports are yet assigned (S1 carrie
 
 Confirm that Fa0/11 → VLAN 10, Fa0/18 → VLAN 20, and Fa0/6 → VLAN 30:
 
-![S2 VLAN Port Assignment](to-show-each-vlan-is-assgin-to-each-port-in-S2.png)
+![S2 VLAN Port Assignment](ScreenShots/to-show-each-vlan-is-assgin-to-each-port-in-S2.png)
 
 ---
 
@@ -205,7 +205,7 @@ Confirm that Fa0/11 → VLAN 10, Fa0/18 → VLAN 20, and Fa0/6 → VLAN 30:
 
 Confirm that Fa0/11 → VLAN 10, Fa0/18 → VLAN 20, Fa0/6 → VLAN 30, and VLAN 150 active on Fa0/11:
 
-![S3 VLAN Port Assignment](to-show-each-vlan-is-assgin-to-each-port-in-S3.png)
+![S3 VLAN Port Assignment](ScreenShots/to-show-each-vlan-is-assgin-to-each-port-in-S3.png)
 
 ---
 
@@ -213,7 +213,7 @@ Confirm that Fa0/11 → VLAN 10, Fa0/18 → VLAN 20, Fa0/6 → VLAN 30, and VLAN
 
 Verify VLAN 150 (VOICE) is active and listed under Fa0/11:
 
-![Check Voice VLAN on S3](to-check-assgin-voice-to-port-f0-11-on-23.png)
+![Check Voice VLAN on S3](ScreenShots/to-check-assgin-voice-to-port-f0-11-on-23.png)
 
 ---
 
@@ -221,15 +221,15 @@ Verify VLAN 150 (VOICE) is active and listed under Fa0/11:
 
 **PC1 → PC4** (both VLAN 10 — Faculty/Staff):
 
-![Ping PC1 to PC4](PIng-PC1_-to-PC4.png)
+![Ping PC1 to PC4](ScreenShots/PIng-PC1_-to-PC4.png)
 
 **PC2 → PC5** (both VLAN 20 — Students):
 
-![Ping PC2 to PC5](Ping-PC2-to-PC5.png)
+![Ping PC2 to PC5](ScreenShots/Ping-PC2-to-PC5.png)
 
 **PC3 → PC6** (both VLAN 30 — Guest):
 
-![Ping PC3 to PC6](Ping-PC3-to-PC6.png)
+![Ping PC3 to PC6](ScreenShots/Ping-PC3-to-PC6.png)
 
 All pings succeed with **0% packet loss**, confirming correct VLAN segmentation and connectivity within each VLAN.
 
